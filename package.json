@@ -1,0 +1,45 @@
+{
+	"name": "budget-app",
+	"version": "1.0.0",
+	"description": "A react application to manage budgets.",
+	"main": "index.js",
+	"scripts": {
+		"serve": "live-server public/",
+		"build": "webpack --mode=production",
+		"dev-server": "webpack-dev-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/estebansolo/BudgetApp.git.git"
+	},
+	"keywords": [ "React", "Javascript", "Course", "Budget" ],
+	"author": "Esteban Solorzano",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/estebansolo/BudgetApp.git/issues"
+	},
+	"homepage": "https://github.com/estebansolo/BudgetApp.git#readme",
+	"devDependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.6",
+		"css-loader": "^3.2.0",
+		"live-server": "^1.2.1",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^1.0.0",
+		"webpack": "^4.39.1",
+		"webpack-cli": "^3.3.6",
+		"webpack-dev-server": "^3.7.2"
+	},
+	"dependencies": {
+		"normalize.css": "^8.0.1",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-modal": "^3.9.1",
+		"react-router-dom": "^5.0.1"
+	}
+}
