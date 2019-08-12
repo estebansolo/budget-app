@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Header';
 import { ExpenseDashboardPage } from '../pages/ExpenseDashboardPage';
-import { AddExpensePage } from '../pages/AddExpensePage';
-import { EditExpensePage } from '../pages/EditExpensePage';
+import AddExpensePage from '../pages/AddExpensePage';
+import EditExpensePage from '../pages/EditExpensePage';
 import { HelpPage } from '../pages/HelpPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 

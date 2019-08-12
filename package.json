@@ -41,10 +41,14 @@
 		"webpack-dev-server": "^3.7.2"
 	},
 	"dependencies": {
+		"moment": "^2.24.0",
 		"normalize.css": "^8.0.1",
 		"react": "^16.8.6",
+		"react-addons-shallow-compare": "^15.6.2",
+		"react-dates": "^20.2.5",
 		"react-dom": "^16.8.6",
 		"react-modal": "^3.9.1",
+		"react-redux": "^7.1.0",
 		"react-router-dom": "^5.0.1",
 		"redux": "^4.0.4",
 		"uuid": "^3.3.2"
