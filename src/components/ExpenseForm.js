@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import moment from 'moment';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
 const ExpenseForm = ({ onSubmit, expense }) => {
 	const [description, setDescription] = useState(expense ? expense.description : '');
