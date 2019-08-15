@@ -16,7 +16,12 @@
 		"type": "git",
 		"url": "git+https://github.com/estebansolo/BudgetApp.git.git"
 	},
-	"keywords": [ "React", "Javascript", "Course", "Budget" ],
+	"keywords": [
+		"React",
+		"Javascript",
+		"Course",
+		"Budget"
+	],
 	"author": "Esteban Solorzano",
 	"license": "MIT",
 	"bugs": {
