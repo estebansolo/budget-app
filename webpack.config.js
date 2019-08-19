@@ -1,13 +1,13 @@
 // entry -> output
 const path = require('path');
-const webpack = require('webpack')
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development'
-if(process.env.NODE_ENV === 'test'){
-	require('dotenv').config({ path: '.env.test' })
-} else if(process.env.NODE_ENV === 'development') {
-	require('dotenv').config({ path: '.env.development' })
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+if (process.env.NODE_ENV === 'test') {
+	require('dotenv').config({ path: '.env.test' });
+} else if (process.env.NODE_ENV === 'development') {
+	require('dotenv').config({ path: '.env.development' });
 }
 
 module.exports = (env, argv) => {
@@ -20,7 +20,7 @@ module.exports = (env, argv) => {
 	});
 
 	return {
-		entry: './src/app.js',
+		entry: ['@babel/polyfill', './src/app.js'],
 		//entry: './src/playground/hoc.js',
 		output: {
 			path: path.join(__dirname, 'public', 'dist'),

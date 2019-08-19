@@ -12,68 +12,72 @@ const ExpenseForm = ({ onSubmit, expense }) => {
 	const [error, setError] = useState('');
 
 	return (
-		<div>
-			{error && <p>{error}</p>}
-			<form
-				onSubmit={e => {
-					e.preventDefault();
-					if (!description || !amount) {
-						setError('Please provide description and amount');
-					} else {
-						setError('');
-						onSubmit({
-							description,
-							amount: parseFloat(amount, 10) * 100,
-							createdAt: createdAt.valueOf(),
-							note
-						});
+		<form
+			className="form"
+			onSubmit={e => {
+				e.preventDefault();
+				if (!description || !amount) {
+					setError('Please provide description and amount');
+				} else {
+					setError('');
+					onSubmit({
+						description,
+						amount: parseFloat(amount, 10) * 100,
+						createdAt: createdAt.valueOf(),
+						note
+					});
+				}
+			}}
+		>
+			{error && <p className="form__error">{error}</p>}
+			<input
+				type="text"
+				placeholder="Description"
+				autoFocus
+				value={description}
+				className="text-input"
+				onChange={e => {
+					setDescription(e.target.value);
+				}}
+			/>
+			<input
+				type="text"
+				placeholder="Amount"
+				value={amount}
+				className="text-input"
+				onChange={e => {
+					const amount = e.target.value;
+					if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
+						setAmount(amount);
 					}
 				}}
-			>
-				<input
-					type="text"
-					placeholder="Description"
-					autoFocus
-					value={description}
-					onChange={e => {
-						setDescription(e.target.value);
-					}}
-				/>
-				<input
-					type="text"
-					placeholder="Amount"
-					value={amount}
-					onChange={e => {
-						const amount = e.target.value;
-						if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
-							setAmount(amount);
-						}
-					}}
-				/>
-				<SingleDatePicker
-					date={createdAt}
-					onDateChange={newCreatedAt => {
-						if (newCreatedAt) {
-							setCreatedAt(newCreatedAt);
-						}
-					}}
-					focused={calendarFocused}
-					numberOfMonths={1}
-					onFocusChange={({ focused }) => {
-						setCalendarFocused(focused);
-					}}
-					isOutsideRange={() => false}
-				/>
-				<textarea
-					value={note}
-					placeholder="Add a note for your expense"
-					onChange={e => {
-						setNote(e.target.value);
-					}}
-				/>
-				<button>Add Expense</button>
-			</form>
-		</div>
+			/>
+			<SingleDatePicker
+				date={createdAt}
+				onDateChange={newCreatedAt => {
+					if (newCreatedAt) {
+						setCreatedAt(newCreatedAt);
+					}
+				}}
+				focused={calendarFocused}
+				numberOfMonths={1}
+				onFocusChange={({ focused }) => {
+					setCalendarFocused(focused);
+				}}
+				isOutsideRange={() => false}
+			/>
+			<textarea
+				value={note}
+				className="textarea"
+				placeholder="Add a note for your expense"
+				onChange={e => {
+					setNote(e.target.value);
+				}}
+			/>
+			<div>
+				<button className="button">Save Expense</button>
+			</div>
+		</form>
 	);
 };
 

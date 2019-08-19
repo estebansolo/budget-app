@@ -14,12 +14,12 @@ import { shallow } from 'enzyme';
 test('should render header correctly', () => {
 	const wrapper = shallow(<Header startLogout={() => {}} />);
 	expect(wrapper).toMatchSnapshot();
-	//expect(wrapper.find('h1').text()).toBe('Budget App');
+	//expect(wrapper.find('h1').text()).toBe('Budgets Manager');
 });
 
 test('should call startLogout on button click', () => {
-	const startLogout = jest.fn()
+	const startLogout = jest.fn();
 	const wrapper = shallow(<Header startLogout={startLogout} />);
-	wrapper.find('button').simulate('click')
+	wrapper.find('button').simulate('click');
 	expect(startLogout).toHaveBeenCalled();
 });

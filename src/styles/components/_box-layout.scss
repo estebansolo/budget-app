@@ -1,0 +1,54 @@
+.box-layout {
+	align-items: center;
+	background: $dark-blue;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	//width: 100vh;
+}
+
+.box-layout__boxes {
+	display: flex;
+	justify-content: space-between;
+	margin-top: $l-size;
+	> div {
+		margin: 0 1rem;
+	}
+
+	@media (max-width: $desktop-breakpoint) {
+		flex-direction: column;
+		align-items: center;
+		> div {
+			margin: 1rem 0;
+		}
+	}
+}
+
+.box-layout__box {
+	background: fade-out($color: #ffffff, $amount: 0.15);
+	border-radius: 3px;
+	color: $dark-grey;
+	padding: $l-size $m-size;
+	text-align: center;
+	width: 25rem;
+	p {
+		margin: 0 0 $m-size 0;
+	}
+}
+
+.box-layout-login {
+	text-align: center;
+	color: $off-white;
+	h1 {
+		margin: 0;
+	}
+
+	> p {
+		margin: 0;
+	}
+}
+
+.box-layout__title {
+	margin: 0 0 $m-size 0;
+	line-height: 1;
+}
