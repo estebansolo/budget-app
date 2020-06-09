@@ -1,6 +1,6 @@
 # Budgets Manager
 
-See [Demo](https://react-budgets.herokuapp.com/)
+See [Demo](https://budget.estebansolorzano.com/)
 
 Manager created from scratch in React js using firebase database and Google Storage. Course from Udemy
 
